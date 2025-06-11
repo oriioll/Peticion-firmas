@@ -37,6 +37,7 @@
 
 
 const open = document.getElementById('open')
+const open2 = document.getElementById('open2')
 const modal = document.getElementById('modal')
 const close = document.getElementById('close')
 
@@ -47,7 +48,10 @@ open.addEventListener('click', () => {
 close.addEventListener('click', () => {
     modal.style.display = 'none'
 })
-
+open2.addEventListener('click', () => {
+    modal.style.display = 'block'
+    document.getElementById('text').innerHTML = 'SEGUIRME EN VINTED PERRRAS:  <a class="vinted" href="https://www.vinted.es/member/144597676" target="_blank">@urii120</a>';
+})
 let firmas = Math.random() * 1000;
 firmas = Math.floor(firmas);
 document.getElementById('firmas').innerText = firmas;

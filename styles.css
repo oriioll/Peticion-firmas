@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
-  background-color: #B0E0E6;
+  background-color: #b0e0e6;
   color: #ff8866;
   display: flex;
   justify-content: center;
@@ -50,14 +50,24 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   transition: transform 0.3s;
-   font-family: "Montserrat", sans-serif;
-   font-weight: bold;
-   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 button:hover {
   background-color: #e5735c;
-  transform: scale(1.05)
+  transform: scale(1.05);
+}
+
+.vinted {
+  color: #ff8866;
+  transition: transform 0.3s;
+  color: #ff8866;
+  text-decoration: underline;
+}
+.vinted:hover {
+  transform: scale(1.25);
 }
 
 @media (max-width: 600px) {
@@ -67,40 +77,37 @@ button:hover {
     height: auto;
   }
   .fixed p {
-  overflow-y: auto;
-  width: 90%;
-  font-size: .5rem;
-  font-weight: inherit;
-  line-height: 1.6;
-  margin-top: 35px;
-  overflow-x: hidden;
-
+    overflow-y: auto;
+    width: 90%;
+    font-size: 0.5rem;
+    font-weight: inherit;
+    line-height: 1.6;
+    margin-top: 35px;
+    overflow-x: hidden;
+  }
+  .fixed {
+    height: 150vh;
+    width: 90vw;
+    border: 2px solid #ff8866;
+    background-color: #b0e0e6;
+    color: #ff8866;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+  }
 }
-.fixed {
-  height: 150vh;
-  width: 90vw;
-  border: 2px solid #ff8866;
-  background-color: #B0E0E6;
-  color: #ff8866;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  border-radius: 20px;
-  z-index: 1000;
-  overflow-y: auto;
-  
-}
-}
-
 
 .fixed {
   height: 50vh;
   width: 30%;
   border: 2px solid #ff8866;
-  background-color: #B0E0E6;
+  background-color: #b0e0e6;
   color: #ff8866;
   position: fixed;
   display: flex;
@@ -111,7 +118,6 @@ button:hover {
   border-radius: 20px;
   z-index: 1000;
   overflow-y: auto;
-  
 }
 
 .fixed p {
@@ -130,7 +136,7 @@ button:hover {
   position: absolute;
   top: 10px;
   right: 10px;
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 
 .fixed svg:hover {
@@ -141,4 +147,40 @@ button:hover {
 span:hover {
   color: #e5735c;
   cursor: pointer;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Aplica animaciones a los elementos principales */
+h1 {
+  animation: fadeInUp 0.8s ease;
+}
+
+p,
+.condiciones,
+.botones,
+canvas {
+  animation: fadeIn 1s ease;
+}
+
+.fixed {
+  animation: fadeInUp 0.7s ease;
 }

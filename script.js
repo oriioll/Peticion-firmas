@@ -33,3 +33,18 @@
                 btnBorrar.addEventListener("click", () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpia todo el área del canvas
         });
+
+
+
+const open = document.getElementById('open')
+const modal = document.getElementById('modal')
+const close = document.getElementById('close')
+
+open.addEventListener('click', () => {
+    modal.style.display = 'block'
+})
+
+close.addEventListener('click', () => {
+    modal.style.display = 'none'
+})
+

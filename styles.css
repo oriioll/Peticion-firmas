@@ -65,4 +65,79 @@ button:hover {
     max-width: 350px;
     height: auto;
   }
+  .fixed p {
+  overflow-y: auto;
+  width: 90%;
+  font-size: .5rem;
+  font-weight: inherit;
+  line-height: 1.6;
+  margin: 25px;
+  margin-top: 35px;
+  overflow-x: hidden;
+}
+.fixed {
+  height: 50vh;
+  width: 90vw;
+  border: 2px solid #ff8866;
+  background-color: #B0E0E6;
+  color: #ff8866;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  
+}
+}
+
+
+.fixed {
+  height: 50vh;
+  width: 30%;
+  border: 2px solid #ff8866;
+  background-color: #B0E0E6;
+  color: #ff8866;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  
+}
+
+.fixed p {
+  overflow-y: auto;
+  width: 90%;
+  font-size: 1.1rem;
+  font-weight: inherit;
+  line-height: 1.6;
+  margin: 25px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+}
+
+.fixed svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+    transition: transform 0.3s;
+}
+
+.fixed svg:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+span:hover {
+  color: #e5735c;
+  cursor: pointer;
 }

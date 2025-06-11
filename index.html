@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Petición de Firmas</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="fixed" id="modal" style="display: none;">
+    <svg id="close" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="8" y1="8" x2="24" y2="24" stroke="#ff8866" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="24" y1="8" x2="8" y2="24" stroke="#ff8866" stroke-width="4.5" stroke-linecap="round"/>
+    </svg>
+      <p>
+        Creemos en el esfuerzo compartido y la colaboración, especialmente en
+        proyectos que requieren compromiso y dedicación. Cuando una persona
+        decide no involucrarse, está dejando a los demás con una carga injusta,
+        afectando el rendimiento y el resultado final. El TDR es un trabajo que
+        representa meses de esfuerzo, aprendizaje y crecimiento. Para que sea
+        realmente efectivo, es fundamental que todas las partes aporten su
+        dedicación, sus ideas y su trabajo. <br>
+        Ayudar a la Gemma no es solo una
+        cuestión de responsabilidad, sino de compañerismo y respeto por el
+        esfuerzo de todos. ¡Firma y apoya el trabajo en equipo!
+      </p>
+    </div>
     <h1>Petición de firmas: Abril</h1>
-    <p>Firma aquí para pedir que la Abril trabaje, colabore y ayude a la Gemma en el TDR y demás trabajos. <br> Di <span style= " text-decoration: underline;">NO</span> a la vagancia.</p>
- <canvas id="miCanvas" width="600" height="300"></canvas>
- <form>
- <div class="condiciones" style="display: flex; gap: 10px; margin-top: 20px;">
- <input type="checkbox" id="checkbox" name="checkbox" required>
- <label for="checkbox">Acepto los términos y condiciones</label>
- </div>
- <div class="botones">
-    <button type="submit" class="btn">Añade tu firma</button>
-    <button type="reset" class="btn" id="borrarCanvas">Borrar</button>
- </div>
-</form>
-    
-    <script src = "script.js"></script>
-       
-</body>
+    <p>
+      Firma aquí para pedir que la Abril trabaje, colabore y ayude a la Gemma en
+      el TDR y demás trabajos. <br />
+      Di <span id="open" style="text-decoration: underline">NO</span> a la vagancia.
+    </p>
+    <canvas id="miCanvas" width="600" height="300"></canvas>
+    <form>
+      <div
+        class="condiciones"
+        style="display: flex; gap: 10px; margin-top: 20px"
+      >
+        <input type="checkbox" id="checkbox" name="checkbox" required />
+        <label for="checkbox">Acepto los términos y condiciones</label>
+      </div>
+      <div class="botones">
+        <button type="submit" class="btn">Añade tu firma</button>
+        <button type="reset" class="btn" id="borrarCanvas">Borrar</button>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
 </html>

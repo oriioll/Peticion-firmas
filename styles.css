@@ -11,13 +11,18 @@ body {
   width: 100%;
   background-color: #b0e0e6;
   color: #ff8866;
+
+  font-size: 1.2rem;
+  overscroll-behavior: smooth;
+}
+
+section {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  font-size: 1.2rem;
-  overscroll-behavior: smooth;
 }
 
 p {
@@ -27,8 +32,10 @@ p {
 
 canvas {
   cursor: crosshair;
-  border: 2px solid #ff8866; /* Borde negro */
-  background-color: white; /* Fondo blanco */
+  border: 2px solid #ff8866;
+  /* Borde negro */
+  background-color: white;
+  /* Fondo blanco */
   border-radius: 10px;
 }
 
@@ -66,6 +73,7 @@ button:hover {
   color: #ff8866;
   text-decoration: underline;
 }
+
 .vinted:hover {
   transform: scale(1.25);
 }
@@ -76,6 +84,7 @@ button:hover {
     max-width: 350px;
     height: auto;
   }
+
   .fixed p {
     overflow-y: auto;
     width: 90%;
@@ -85,6 +94,7 @@ button:hover {
     margin-top: 35px;
     overflow-x: hidden;
   }
+
   .fixed {
     height: 150vh;
     width: 90vw;
@@ -154,6 +164,7 @@ span:hover {
     opacity: 0;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -164,6 +175,7 @@ span:hover {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -183,4 +195,22 @@ canvas {
 
 .fixed {
   animation: fadeInUp 0.7s ease;
+}
+
+footer {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  
+}
+
+footer svg {
+  transition: transform 0.3s;
+}
+
+footer svg:hover {
+  transform: scale(1.2);
 }

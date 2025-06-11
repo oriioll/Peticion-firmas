@@ -48,3 +48,25 @@ close.addEventListener('click', () => {
     modal.style.display = 'none'
 })
 
+let firmas = Math.random() * 1000;
+firmas = Math.floor(firmas);
+document.getElementById('firmas').innerText = firmas;
+
+const submit = document.getElementById('submit');
+
+
+submit.addEventListener('click', (e) => {
+
+    // Marca visualmente el botón como enviado
+    submit.textContent = "¡Firma añadida!";
+    submit.disabled = true;
+    firmas += 1; 
+    document.getElementById('firmas').innerText = firmas;
+
+    // Opcional: vuelve a habilitar el botón tras 2 segundos
+    setTimeout(() => {
+        submit.textContent = "Añade tu firma";
+        submit.disabled = false;
+        submit.style.backgroundColor = "#ff8866";
+    }, 2000);
+});

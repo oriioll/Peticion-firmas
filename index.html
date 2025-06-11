@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petición de Firmas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Petición de firmas: Abril</h1>
+    <p>Firma aquí para pedir que la Abril trabaje, colabore y ayude a la Gemma en el TDR y demás trabajos. <br> Di <span style= " text-decoration: underline;">NO</span> a la vagancia.</p>
+ <canvas id="miCanvas" width="600" height="300"></canvas>
+ <form>
+ <div class="condiciones" style="display: flex; gap: 10px; margin-top: 20px;">
+ <input type="checkbox" id="checkbox" name="checkbox" required>
+ <label for="checkbox">Acepto los términos y condiciones</label>
+ </div>
+ <div class="botones">
+    <button type="submit" class="btn">Añade tu firma</button>
+    <button type="reset" class="btn" id="borrarCanvas">Borrar</button>
+ </div>
+</form>
+    
+    <script>
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
+                const btnBorrar = document.getElementById("borrarCanvas");
+
+
+        let escribiendo = false;
+        let xAnterior, yAnterior;
+
+        canvas.addEventListener("mousedown", (event) => {
+            escribiendo = true;
+            xAnterior = event.offsetX;
+            yAnterior = event.offsetY;
+        });
+
+        canvas.addEventListener("mouseup", () => escribiendo = false);
+        canvas.addEventListener("mousemove", dibujar);
+
+        function dibujar(event) {
+            if (!escribiendo) return;
+
+            ctx.strokeStyle = "black"; /* Color negro */
+            ctx.lineWidth = 2; /* Grosor de la línea */
+            ctx.lineCap = "round"; /* Bordes redondeados */
+
+            ctx.beginPath();
+            ctx.moveTo(xAnterior, yAnterior);
+            ctx.lineTo(event.offsetX, event.offsetY);
+            ctx.stroke();
+
+            xAnterior = event.offsetX;
+            yAnterior = event.offsetY;
+        }
+                btnBorrar.addEventListener("click", () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpia todo el área del canvas
+        });
+    </script>
+
+    
+
+
+</body>
+</html>
